@@ -14,6 +14,7 @@
 		0899A4A827B643F90029B317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0899A4A727B643F90029B317 /* Assets.xcassets */; };
 		0899A4AB27B643F90029B317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0899A4A927B643F90029B317 /* LaunchScreen.storyboard */; };
 		0899A4AE27B643F90029B317 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899A4AD27B643F90029B317 /* main.m */; };
+		0899A4B727B6440F0029B317 /* NSObject+GACRetainCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899A4B527B6440F0029B317 /* NSObject+GACRetainCount.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		0899A4AA27B643F90029B317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0899A4AC27B643F90029B317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0899A4AD27B643F90029B317 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0899A4B527B6440F0029B317 /* NSObject+GACRetainCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GACRetainCount.m"; sourceTree = "<group>"; };
+		0899A4B627B6440F0029B317 /* NSObject+GACRetainCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GACRetainCount.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 		0899A49A27B643F60029B317 /* ios_demo */ = {
 			isa = PBXGroup;
 			children = (
+				0899A4B427B6440F0029B317 /* OBJ */,
 				0899A49B27B643F60029B317 /* AppDelegate.h */,
 				0899A49C27B643F60029B317 /* AppDelegate.m */,
 				0899A49E27B643F60029B317 /* SceneDelegate.h */,
@@ -74,6 +78,15 @@
 				0899A4AD27B643F90029B317 /* main.m */,
 			);
 			path = ios_demo;
+			sourceTree = "<group>";
+		};
+		0899A4B427B6440F0029B317 /* OBJ */ = {
+			isa = PBXGroup;
+			children = (
+				0899A4B527B6440F0029B317 /* NSObject+GACRetainCount.m */,
+				0899A4B627B6440F0029B317 /* NSObject+GACRetainCount.h */,
+			);
+			path = OBJ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +163,7 @@
 				0899A49D27B643F60029B317 /* AppDelegate.m in Sources */,
 				0899A4AE27B643F90029B317 /* main.m in Sources */,
 				0899A4A027B643F60029B317 /* SceneDelegate.m in Sources */,
+				0899A4B727B6440F0029B317 /* NSObject+GACRetainCount.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,9 +306,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J3P7V5TL23;
+				DEVELOPMENT_TEAM = 4Z2877VT79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ios_demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -302,13 +317,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "samingzhong.ios-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = samingzhong.ios.demo1313;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,9 +336,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J3P7V5TL23;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ios_demo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -329,13 +347,15 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "samingzhong.ios-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = samingzhong.ios.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -6,6 +6,17 @@
 //
 
 #import "AppDelegate.h"
+#import "NSObject+GACRetainCount.h"
+
+@interface Person : NSObject
+
+
+@end
+
+@implementation Person
+
+@end
+
 
 @interface AppDelegate ()
 
@@ -16,8 +27,35 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self autoreleaseTest];
+    
     return YES;
 }
+
+
+- (void)autoreleaseTest
+{
+    @autoreleasepool {
+        __strong id s_obj = Person.new;
+        __weak id w_obj = s_obj;
+        
+        __weak id array = [NSArray arrayWithObject:s_obj];
+        
+        
+        
+        [s_obj printRetainCount];
+        for (int i=0; i<764; i++) {
+            [s_obj rq_retain];
+        }
+        
+        for (int i=0; i<780; i++) {
+            [s_obj rq_retain];
+        }
+        [w_obj printRetainCount];
+//        [s_obj rq_autorelease];
+    }
+}
+
 
 
 #pragma mark - UISceneSession lifecycle
